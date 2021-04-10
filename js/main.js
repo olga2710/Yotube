@@ -1,0 +1,120 @@
+const swiper = new Swiper('.chanel-slider', {
+	// Optional parameters
+	loop: true,
+	slidesPerView:1,
+	spaceBetween:20,
+    breakpoints:{
+		1900:{
+			slidesPerView:6,
+		},
+		1600:{
+			slidesPerView:5,	
+		},
+		1300:{
+			slidesPerView:4,	
+		},
+		1100:{
+			slidesPerView:3,	
+		},
+		800:{
+			slidesPerView:2,	
+		},
+
+	},
+
+  
+	// Navigation arrows
+	navigation: {
+	  nextEl: '.channel-button-next',
+	  prevEl: '.channel-button-prev',
+	},
+  
+
+  });
+  const swiper1 = new Swiper('.chanel-slider1', {
+	// Optional parameters
+	loop: true,
+	slidesPerView:1,
+	spaceBetween:20,
+    breakpoints:{
+		1900:{
+			slidesPerView:2,
+		},
+		1100:{
+			slidesPerView:2,
+		}
+	},
+
+  
+
+  
+	// Navigation arrows
+	navigation: {
+	  nextEl: '.channel-button-next1',
+	  prevEl: '.channel-button-prev1',
+	},
+  
+
+  });
+  const swiper2 = new Swiper('.chanel-slider2', {
+	// Optional parameters
+	loop: true,
+	slidesPerView:1,
+	spaceBetween:20,
+    breakpoints:{
+		1900:{
+			slidesPerView:6,
+		},
+		1600:{
+			slidesPerView:5,	
+		},
+		1300:{
+			slidesPerView:4,	
+		},
+		1100:{
+			slidesPerView:3,	
+		},
+		800:{
+			slidesPerView:2,	
+		},
+
+	},
+  
+
+  
+	// Navigation arrows
+	navigation: {
+	  nextEl: '.channel-button-next2',
+	  prevEl: '.channel-button-prev2',
+	},
+  
+
+  });
+
+
+ 
+
+
+
+  const body = document.querySelector('.container');
+  const searchBtn = document.querySelector('.mobile-search');
+  const mobileSearch = document.querySelector('.input-group');
+	searchBtn.addEventListener('click', ()=>{
+		mobileSearch.classList.toggle('is-open')
+  
+	});
+	body.addEventListener('click', ()=>{
+		mobileSearch.classList.remove('is-open')
+  
+	})
+	
+	if (document.documentElement.scrollWidth <=640){
+		swiper.destroy();
+		swiper1.destroy();
+		swiper2.destroy();
+	
+	  }
+  
+
+  
+
